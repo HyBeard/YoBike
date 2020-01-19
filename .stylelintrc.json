@@ -29,6 +29,29 @@
     "media-feature-range-operator-space-before": "never",
     "no-descending-specificity": null,
     "no-duplicate-selectors": true,
+    "property-no-vendor-prefix": true,
+    "rule-empty-line-before": null,
+    "scss/dollar-variable-default": [true, { "ignore": "local" }],
+    "selector-attribute-quotes": "always",
+    "selector-max-attribute": 2,
+    "selector-max-class": 4,
+    "selector-max-combinators": 4,
+    "selector-max-compound-selectors": 4,
+    "selector-max-empty-lines": 1,
+    "selector-max-id": 0,
+    "selector-max-specificity": null,
+    "selector-max-type": 2,
+    "selector-max-universal": 1,
+    "selector-no-qualifying-type": true,
+    "selector-no-vendor-prefix": true,
+    "value-keyword-case": "lower",
+    "value-no-vendor-prefix": true,
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": ["FontAwesome"]
+      }
+    ],
     "order/order": [
       "custom-properties",
       "dollar-variables",
@@ -270,23 +293,6 @@
       "animation-fill-mode",
       "fill",
       "stroke"
-    ],
-    "property-no-vendor-prefix": true,
-    "rule-empty-line-before": null,
-    "scss/dollar-variable-default": [true, { "ignore": "local" }],
-    "selector-attribute-quotes": "always",
-    "selector-max-attribute": 2,
-    "selector-max-class": 4,
-    "selector-max-combinators": 4,
-    "selector-max-compound-selectors": 4,
-    "selector-max-empty-lines": 1,
-    "selector-max-id": 0,
-    "selector-max-specificity": null,
-    "selector-max-type": 2,
-    "selector-max-universal": 1,
-    "selector-no-qualifying-type": true,
-    "selector-no-vendor-prefix": true,
-    "value-keyword-case": "lower",
-    "value-no-vendor-prefix": true
+    ]
   }
 }
