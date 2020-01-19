@@ -12,7 +12,7 @@ module.exports = ({ webpack }) => {
     plugins: [
       postcssImport(postcssNormalize().postcssImport({ path: ['./src/styles'] })),
       postcssPurgeCss({
-        content: ['./src/**/*.html', './src/**/*.hbs'],
+        content: ['./src/**/*.html'],
         whitelistPatterns: [/visible/, /active/, /hidden/, /transparent/, /expanded/],
       }),
       isProd ? autoprefixer() : false,

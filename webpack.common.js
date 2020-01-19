@@ -3,9 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const miniSvgDataUri = require('mini-svg-data-uri');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const skillsData = require('./src/data/skills.json');
-const projectsData = require('./src/data/projects.json');
-
 const PATHS = {
   src: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'dist'),
@@ -105,14 +102,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Kaptsevich Ilya | Front End',
-      template: `${PATHS.src}/views`,
+      title: 'Bike Store',
+      template: `${PATHS.src}/views/index.html`,
       inject: 'body',
-      templateParameters: {
-        skillsData,
-        projectsData,
-      },
-      favicon: `${PATHS.public}/favicon.png`,
+      // favicon: `${PATHS.public}/favicon.png`,
     }),
   ],
 };
