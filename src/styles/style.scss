@@ -62,3 +62,644 @@
     content: "\f107";
   }
 }
+
+.tools {
+  &::before {
+    display: none;
+  }
+}
+
+.parts__wrap {
+  position: relative;
+
+  &:hover .parts__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.parts__link {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  font-size: 0.8rem;
+  line-height: 1rem;
+
+  &::before {
+    content: "\f105";
+  }
+}
+
+.types__wrap {
+  position: relative;
+
+  &:hover .types__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.types__links {
+  position: absolute;
+  top: 39px;
+  left: -20px;
+  z-index: 5;
+  display: none;
+  width: 160px;
+  padding: 15px 30px;
+  background: $white;
+  box-shadow: 0 -5px 16px -8px rgba($black, 0.75);
+}
+
+.types__link {
+  @include dropDownLink;
+}
+
+.mountain {
+  width: 120%;
+
+  &__link {
+    @include dropDownLink;
+  }
+
+  &__links {
+    top: 30px;
+    left: 221px;
+  }
+
+  &:hover .mountain__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.road {
+  width: 120%;
+
+  &__link {
+    @include dropDownLink;
+  }
+
+  &__links {
+    top: 55px;
+    left: 221px;
+  }
+
+  &:hover .road__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.urban {
+  width: 120%;
+
+  &__link {
+    @include dropDownLink;
+  }
+
+  &__links {
+    top: 80px;
+    left: 221px;
+  }
+
+  &:hover .urban__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.frames__wrap {
+  position: relative;
+
+  &:hover .mini-catalog {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+  }
+}
+
+.mini-catalog {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  width: 750px;
+  padding: 20px;
+  background: $white;
+  box-shadow: 0 -5px 16px -8px rgba($black, 0.75);
+
+  &__category {
+    padding: 0 20px;
+    border-right: 1px solid #e8e8e8;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $secondary;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__links {
+    margin-left: -22px;
+  }
+
+  &__link {
+    @include dropDownLink;
+  }
+}
+
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.drop__menu {
+  display: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    font-family: FontAwesome;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 60px;
+    color: $white;
+    content: "\f0c9";
+  }
+}
+
+.drop_button {
+  display: none;
+}
+
+.button-second {
+  @include button;
+  display: none;
+
+  margin-right: -15px;
+
+  &::before {
+    font-size: 1.3rem;
+    color: $white;
+    content: "\f002";
+  }
+}
+
+.search {
+  position: relative;
+  width: 190px;
+
+  &__close {
+    display: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s ease;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-family: FontAwesome;
+      font-size: 2rem;
+      line-height: 64px;
+      color: $secondary;
+      content: "\f00d";
+    }
+  }
+
+  &__input {
+    width: 121px;
+    height: 35px;
+    padding-right: 10px;
+    padding-left: 20px;
+    color: #9e9c9c;
+    background: $white;
+    border: 1px solid #b6c0a5;
+    outline: none;
+  }
+
+  &__button {
+    @include button;
+
+    position: absolute;
+    top: 0;
+    right: -25px;
+    margin-right: 25px;
+    background: $secondary;
+
+    &:hover {
+      background: $primary;
+    }
+
+    &::before {
+      color: $white;
+      content: "\f002";
+    }
+  }
+}
+
+input::placeholder {
+  color: #b6c0a5;
+}
+
+.search-active {
+  z-index: 9999 !important;
+  opacity: 1 !important;
+}
+
+.minicart {
+  display: flex;
+
+  &:hover &__icon {
+    background: $secondary;
+  }
+
+  &__icon {
+    @include button;
+
+    background: $primary;
+
+    &:hover {
+      background: $secondary;
+    }
+
+    &::before {
+      font-size: 1.2rem;
+      color: $white;
+      content: "\f07a";
+    }
+  }
+
+  &__count {
+    @include button;
+
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 39px;
+    color: $secondary;
+    text-align: center;
+    background: $paper;
+  }
+}
+
+.profile__button {
+  @include button;
+
+  background: $paper;
+
+  &:hover {
+    background: $primary;
+  }
+
+  &::before {
+    content: "\f007";
+  }
+}
+
+.minicart,
+.profile__button {
+  margin-left: 15px;
+}
+.tools {
+  &::before {
+    display: none;
+  }
+}
+
+.parts__wrap {
+  position: relative;
+
+  &:hover .parts__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.parts__link {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  font-size: 0.8rem;
+  line-height: 1rem;
+
+  &::before {
+    content: "\f105";
+  }
+}
+
+.types__wrap {
+  position: relative;
+
+  &:hover .types__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.types__links {
+  position: absolute;
+  top: 39px;
+  left: -20px;
+  z-index: 5;
+  display: none;
+  width: 160px;
+  padding: 15px 30px;
+  background: $white;
+  box-shadow: 0 -5px 16px -8px rgba($black, 0.75);
+}
+
+.types__link {
+  @include dropDownLink;
+}
+
+.mountain {
+  width: 120%;
+
+  &__link {
+    @include dropDownLink;
+  }
+
+  &__links {
+    top: 30px;
+    left: 221px;
+  }
+
+  &:hover .mountain__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.road {
+  width: 120%;
+
+  &__link {
+    @include dropDownLink;
+  }
+
+  &__links {
+    top: 55px;
+    left: 221px;
+  }
+
+  &:hover .road__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.urban {
+  width: 120%;
+
+  &__link {
+    @include dropDownLink;
+  }
+
+  &__links {
+    top: 80px;
+    left: 221px;
+  }
+
+  &:hover .urban__links {
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.frames__wrap {
+  position: relative;
+
+  &:hover .mini-catalog {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+  }
+}
+
+.mini-catalog {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  width: 750px;
+  padding: 20px;
+  background: $white;
+  box-shadow: 0 -5px 16px -8px rgba($black, 0.75);
+
+  &__category {
+    padding: 0 20px;
+    border-right: 1px solid #e8e8e8;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $secondary;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__links {
+    margin-left: -22px;
+  }
+
+  &__link {
+    @include dropDownLink;
+  }
+}
+
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.drop__menu {
+  display: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    font-family: FontAwesome;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 60px;
+    color: $white;
+    content: "\f0c9";
+  }
+}
+
+.drop_button {
+  display: none;
+}
+
+.button-second {
+  @include button;
+  display: none;
+
+  margin-right: -15px;
+
+  &::before {
+    font-size: 1.3rem;
+    color: $white;
+    content: "\f002";
+  }
+}
+
+.search {
+  position: relative;
+  width: 190px;
+
+  &__close {
+    display: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s ease;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-family: FontAwesome;
+      font-size: 2rem;
+      line-height: 64px;
+      color: $secondary;
+      content: "\f00d";
+    }
+  }
+
+  &__input {
+    width: 121px;
+    height: 35px;
+    padding-right: 10px;
+    padding-left: 20px;
+    color: #9e9c9c;
+    background: $white;
+    border: 1px solid #b6c0a5;
+    outline: none;
+  }
+
+  &__button {
+    @include button;
+
+    position: absolute;
+    top: 0;
+    right: -25px;
+    margin-right: 25px;
+    background: $secondary;
+
+    &:hover {
+      background: $primary;
+    }
+
+    &::before {
+      color: $white;
+      content: "\f002";
+    }
+  }
+}
+
+input::placeholder {
+  color: #b6c0a5;
+}
+
+.search-active {
+  z-index: 9999 !important;
+  opacity: 1 !important;
+}
+
+.minicart {
+  display: flex;
+
+  &:hover &__icon {
+    background: $secondary;
+  }
+
+  &__icon {
+    @include button;
+
+    background: $primary;
+
+    &:hover {
+      background: $secondary;
+    }
+
+    &::before {
+      font-size: 1.2rem;
+      color: $white;
+      content: "\f07a";
+    }
+  }
+
+  &__count {
+    @include button;
+
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 39px;
+    color: $secondary;
+    text-align: center;
+    background: $paper;
+  }
+}
+
+.profile__button {
+  @include button;
+
+  background: $paper;
+
+  &:hover {
+    background: $primary;
+  }
+
+  &::before {
+    content: "\f007";
+  }
+}
+
+.minicart,
+.profile__button {
+  margin-left: 15px;
+}
