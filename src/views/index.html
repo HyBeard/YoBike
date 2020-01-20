@@ -9,6 +9,16 @@
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -142,54 +152,50 @@
                         >Cross Country mountain bikes</a
                       >
                     </li>
+                    <li>
                       <a class="header__link mountain__link" href="#">Trail mountain bikes</a>
-                      <a class="header__link mountain__link" href="#">Trail mountain bikes</a>
+                    </li>
                     <li>
                       <a class="header__link mountain__link" href="#">Downhill mountain bikes</a>
-                      <a class="header__link mountain__link" href="#">Downhill mountain bikes</a>
-                    <li>
+                    </li>
                     <li>
                       <a class="header__link mountain__link" href="#">Electric mountain bikes</a>
                     </li>
                     <li><a class="header__link mountain__link" href="#">Fat Bikes</a></li>
-                    </li>
-                    <li><a class="header__link mountain__link" href="#">Fat Bikes</a></li>
                   </ul>
-                  <a class="header__link parts__link" href="#">Road bikes</a>
+                </li>
                 <li class="road">
+                  <a class="header__link parts__link" href="#">Road bikes</a>
+                  <ul class="types__links road__links">
                     <li><a class="header__link road__link" href="#">Road bikes</a></li>
                     <li><a class="header__link road__link" href="#">Cyclocross bikes</a></li>
                     <li><a class="header__link road__link" href="#">Gravel bikes</a></li>
                     <li><a class="header__link road__link" href="#">Triathlon bikes</a></li>
                     <li><a class="header__link road__link" href="#">Frames</a></li>
-                    <li><a class="header__link road__link" href="#">Triathlon bikes</a></li>
-                    <li><a class="header__link road__link" href="#">Frames</a></li>
                   </ul>
-                  <a class="header__link parts__link" href="#">Urban & commuter bikes</a>
+                </li>
                 <li class="urban">
+                  <a class="header__link parts__link" href="#">Urban & commuter bikes</a>
+                  <ul class="types__links urban__links">
                     <li><a class="header__link urban__link" href="#">Hybrid bikes</a></li>
                     <li><a class="header__link urban__link" href="#">Fitness bikes</a></li>
                     <li><a class="header__link urban__link" href="#">Gravel bikes</a></li>
                     <li><a class="header__link urban__link" href="#">Electric bikes</a></li>
                     <li><a class="header__link urban__link" href="#">Cargo</a></li>
-                    <li><a class="header__link urban__link" href="#">Electric bikes</a></li>
-                    <li><a class="header__link urban__link" href="#">Cargo</a></li>
                   </ul>
                 </li>
-            <li class="tools__wrap"><a href="#" class="header__link tools">BIKE TOOLS</a></li>
+              </ul>
             </li>
-              <a href="#" class="header__link types">PRODUCT TYPES</a>
+            <li class="tools__wrap"><a href="#" class="header__link tools">BIKE TOOLS</a></li>
             <li class="types__wrap">
               <a href="#" class="header__link types">PRODUCT TYPES</a>
               <span class="drop_button" data-drop="drop_types"></span>
+              <ul class="types__links drop_types">
+                <li>
                   <a class="header__link parts__link types__link" href="#">Configurable products</a>
-                <li>
                 </li>
-                  <a class="header__link parts__link types__link" href="#">Simple products</a>
-                  <a class="header__link parts__link types__link" href="#">Simple products</a>
                 <li>
-                  <a class="header__link parts__link types__link" href="#">Products with options</a>
-                </li>
+                  <a class="header__link parts__link types__link" href="#">Simple products</a>
                 </li>
                 <li>
                   <a class="header__link parts__link types__link" href="#">Products with options</a>
@@ -200,7 +206,61 @@
         </nav>
       </div>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <div class="slider">
+        <div class="slide slide-1">
+          <img src="../assets/images/slider/slide2.jpg" alt="slide-1" class="slider__img" />
+          <div class="slider__content slider__content_pos_right">
+            <p class="slider__title">
+              WOMEN'S <br />
+              BIKES
+            </p>
+            <div class="slider__text">
+              <span class="slider__sale">15</span>
+              <span class="slider__parcent"
+                >% <br />
+                OFF</span
+              >
+            </div>
+            <a href="#"><div class="slider__button">LEARN MORE</div></a>
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <img src="../assets/images/slider/slide1.jpg" alt="slide-1" class="slider__img" />
+          <div class="slider__content">
+            <p class="slider__title">
+              MOUNTAIN <br />
+              BIKES
+            </p>
+            <div class="slider__text">
+              <span class="slider__sale">10</span>
+              <span class="slider__parcent"
+                >% <br />
+                OFF</span
+              >
+            </div>
+            <a href="#"><div class="slider__button">LEARN MORE</div></a>
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <img src="../assets/images/slider/slide3.jpg" alt="slide-1" class="slider__img" />
+          <div class="slider__content slider__content_pos_left">
+            <p class="slider__title">
+              MEN'S <br />
+              CYCLING APPAREL
+            </p>
+            <div class="slider__text">
+              <span class="slider__sale">20</span>
+              <span class="slider__parcent"
+                >% <br />
+                OFF</span
+              >
+            </div>
+            <a href="#"><div class="slider__button">LEARN MORE</div></a>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="footer"></footer>
   </body>
 </html>
