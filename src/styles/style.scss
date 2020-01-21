@@ -741,55 +741,119 @@ input::placeholder {
   }
 }
 
-.featured__container {
-  width: 1170px;
-  margin: 0 auto 70px;
-  overflow: hidden;
-}
-
-.title__wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.title {
-  font-size: 1.2rem;
-}
-
-.products {
-  display: flex;
-  justify-content: space-between;
-  transition: 0.5s;
-
-  &__item {
-    position: relative;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
+.banner {
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 70px;
 
   &__img {
-    width: 260px;
+    width: 100%;
   }
 
-  &__item_wrap {
+  &__content {
+    @include slider_content;
+    right: 10%;
+
+    left: auto;
+  }
+
+  &__title {
+    @include slider_title;
+  }
+
+  &__title-second {
+    font-size: 1.2rem;
+  }
+
+  &__text {
+    @include slider_text;
+  }
+
+  &__sale {
+    @include slider_sale;
+  }
+
+  &__parcent {
+    @include slider_parcent;
+  }
+
+  &__button {
+    @include slider_button;
+  }
+}
+
+//slider new product
+.products__new {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $white;
+  background: $primary;
+}
+
+.sales-banner__one,
+.sales-banner__two {
+  position: relative;
+
+  &:hover .sales-banner__img {
+    filter: grayscale(0);
+  }
+}
+
+.sales-banner {
+  &__img {
+    position: relative;
+    filter: grayscale(1);
+    transition: 0.3s filter ease;
+  }
+
+  &__wrap {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    width: 1170px;
+    margin: 70px auto;
   }
 
-  &__link {
-    font-size: 0.9rem;
+  &__content {
+    position: absolute;
+    top: 15%;
+    left: 40%;
     color: $secondary;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+  }
+
+  &_sale {
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+
+  &__title-second {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $white;
+    background: $primary;
+    filter: none;
     transition: 0.3s ease;
 
     &:hover {
-      color: $primary;
+      background: $secondary;
     }
   }
+}
 
   &__price {
     font-size: 1.2rem;
