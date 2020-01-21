@@ -389,89 +389,105 @@ input::placeholder {
   }
 }
 
-.parts__wrap {
+.slider {
+  max-width: 100%;
+
+  &__img {
+    width: 100%;
+    min-height: 140px;
+  }
+
+  //slider-1 style
+  .slick-dots {
+    right: 50px;
+    bottom: 80px;
+    width: auto;
+  }
+
+  .slick-dots li {
+    margin: 0 13px;
+  }
+
+  .slick-dots li button::before {
+    font-size: 1rem;
+    color: $white;
+    opacity: 1;
+  }
+
+  .slick-dots li.slick-active button::before {
+    color: #46433f;
+    opacity: 1;
+  }
+}
+
+.slide {
   position: relative;
+  z-index: 1;
+  cursor: grab;
 
-  &:hover .parts__links {
-    @media screen and (min-width: 1024px) {
-      display: block;
-    }
+  &:active {
+    cursor: grabbing;
   }
 }
 
-.parts__link {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding-bottom: 0;
-  font-size: 0.8rem;
-  line-height: 1rem;
+.slider__content {
+  @include slider_content;
+}
 
-  &::before {
-    content: "\f105";
+.slider__title {
+  @include slider_title;
+}
+
+.slider__text {
+  @include slider_text;
+}
+
+.slider__sale {
+  @include slider_sale;
+}
+
+.slider__parcent {
+  @include slider_parcent;
+}
+
+.slider__button {
+  @include slider_button;
+}
+
+.slider__content_pos_right {
+  left: 58%;
+}
+
+.slider__content_pos_left {
+  left: 5%;
+}
+
+.categories {
+  width: 100%;
+  padding-bottom: 70px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
   }
 }
 
-.types__wrap {
-  position: relative;
-
-  &:hover .types__links {
-    @media screen and (min-width: 1024px) {
-      display: block;
-    }
-  }
+.mountain-bikes {
+  background: url("../assets/images/category_bikes/cat-1.jpg");
 }
 
-.types__links {
-  position: absolute;
-  top: 39px;
-  left: -20px;
-  z-index: 5;
-  display: none;
-  width: 160px;
-  padding: 15px 30px;
-  background: $white;
-  box-shadow: 0 -5px 16px -8px rgba($black, 0.75);
+.road-bikes {
+  background: url("../assets/images/category_bikes/cat-2.jpg");
 }
 
-.types__link {
-  @include dropDownLink;
+.urban-bikes {
+  background: url("../assets/images/category_bikes/cat-3.jpg");
 }
 
-.mountain {
-  width: 120%;
-
-  &__link {
-    @include dropDownLink;
-  }
-
-  &__links {
-    top: 30px;
-    left: 221px;
-  }
-
-  &:hover .mountain__links {
-    @media screen and (min-width: 1024px) {
-      display: block;
-    }
-  }
-}
-
-.road {
-  width: 120%;
-
-  &__link {
-    @include dropDownLink;
-  }
-
-  &__links {
-    top: 55px;
-    left: 221px;
-  }
-
-  &:hover .road__links {
-    @media screen and (min-width: 1024px) {
-      display: block;
-    }
+.category {
   }
 }
 
