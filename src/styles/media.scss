@@ -1,0 +1,447 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@media screen and (min-width: 1600px) {
+  .header__container {
+    width: 1440px;
+  }
+
+  .header__nav {
+    width: 650px;
+  }
+
+  .header__link {
+    font-size: 1rem;
+
+    &::before {
+      right: -15px;
+      line-height: 1.1rem;
+    }
+  }
+
+  .parts__link {
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    &::before {
+      line-height: 1.5rem;
+    }
+  }
+
+  .types__links {
+    width: 200px;
+  }
+
+  .mountain__link,
+  .urban__link,
+  .road__link {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .mountain__links,
+  .road__links,
+  .urban__links {
+    left: 261px;
+  }
+
+  .mini-catalog {
+    width: 850px;
+
+    &__link {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__img {
+      width: 170px;
+    }
+  }
+
+  .search {
+    width: 250px;
+
+    &__input {
+      width: 171px;
+      height: 45px;
+      font-size: 1rem;
+    }
+
+    &__button {
+      width: 49px;
+      height: 49px;
+
+      &::before {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .minicart {
+    &__count {
+      width: 49px;
+      height: 49px;
+      font-size: 1.1rem;
+      line-height: 49px;
+    }
+  }
+
+  .profile__button,
+  .minicart__icon {
+    width: 49px;
+    height: 49px;
+
+    &::before {
+      font-size: 1.3rem;
+    }
+  }
+
+  .slider {
+    //slider-1 style
+    .slick-dots {
+      right: 60px;
+      bottom: 90px;
+    }
+
+    .slick-dots li {
+      margin: 0 15px;
+    }
+
+    .slick-dots li button::before {
+      font-size: 1rem;
+    }
+  }
+
+  .slider__content {
+    left: 50%;
+  }
+
+  .slider__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .slider__sale {
+    font-size: 11rem;
+    line-height: 11rem;
+  }
+
+  .slider__parcent {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .slider__button {
+    padding: 20px 30px;
+    font-size: 1.1rem;
+  }
+
+  .slider__content_pos_right {
+    left: 58%;
+  }
+
+  .slider__content_pos_left {
+    left: 10%;
+  }
+
+  .categories {
+    &__container {
+      width: 1440px;
+    }
+  }
+
+  .category {
+    width: 450px;
+    height: 380px;
+
+    &__container {
+      width: 360px;
+      height: 380px;
+      margin-left: 50px;
+      padding-top: 45%;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+
+    &__link {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+
+    &__button {
+      padding: 20px 40px;
+      font-size: 1rem;
+    }
+
+    &:hover &__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .brands_space_around {
+    width: 1440px;
+  }
+
+  .brand {
+    width: 200px;
+  }
+
+  .featured__container {
+    width: 1440px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .products {
+    &__img {
+      width: 330px;
+    }
+
+    &__link {
+      font-size: 1.1rem;
+    }
+
+    &__price {
+      font-size: 1.3rem;
+    }
+
+    &__button {
+      width: 49px;
+      height: 49px;
+      margin-left: 10px;
+    }
+
+    &__button_like {
+      &::before {
+        font-size: 1.2rem;
+        content: "";
+      }
+    }
+
+    &__button_info {
+      &::before {
+        font-size: 1.2rem;
+        content: "";
+      }
+    }
+
+    //slider-2 style
+    .slick-slide {
+      width: 330px;
+      margin-right: 40px;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+      font-size: 2rem;
+    }
+
+    .slick-prev {
+      right: 62px;
+    }
+
+    .stars {
+      margin: 5px 0 10px;
+    }
+
+    .star_active {
+      &::before {
+        font-size: 1.2rem;
+      }
+    }
+
+    .star_not_active {
+      &::before {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .banner {
+    &__content {
+      @include slider_content;
+      right: 15%;
+
+      left: auto;
+    }
+
+    &__title {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    &__title-second {
+      font-size: 1.5rem;
+    }
+
+    &__sale {
+      font-size: 11rem;
+      line-height: 11rem;
+    }
+
+    &__parcent {
+      font-size: 5rem;
+      line-height: 5rem;
+    }
+
+    &__button {
+      padding: 20px 30px;
+      font-size: 1.1rem;
+    }
+  }
+
+  .products__new {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .sales-banner {
+    &__img {
+      width: 690px;
+    }
+
+    &__wrap {
+      width: 1440px;
+    }
+
+    &__title {
+      font-size: 2.2rem;
+    }
+
+    &_sale {
+      font-size: 4rem;
+    }
+
+    &__title-second {
+      font-size: 1.1rem;
+    }
+
+    &__button {
+      padding: 20px 35px;
+      font-size: 1rem;
+    }
+  }
+
+  .blog {
+    &__wrap {
+      width: 1440px;
+      margin: 0 auto;
+      padding: 50px 0 20px;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      color: $white;
+    }
+  }
+
+  .item {
+    &:hover .item__wrap {
+      top: 54%;
+    }
+
+    &__img {
+      width: 450px;
+    }
+
+    &__wrap {
+      position: absolute;
+      top: 65%;
+      left: 0;
+      padding: 25px;
+      color: $white;
+      transition: 0.5s ease;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+      transition: 1s ease;
+    }
+
+    &__title {
+      font-size: 1.1rem;
+    }
+  }
+
+  .item__author,
+  .item__date,
+  .item__comments {
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    &__wrap {
+      width: 1440px;
+    }
+
+    &__links {
+      width: 600px;
+    }
+
+    &__link {
+      font-size: 1rem;
+    }
+  }
+
+  .contacts {
+    width: 300px;
+
+    &__text {
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
+  }
+
+  .footer__title,
+  .contacts__title {
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+  }
+
+  .number::before,
+  .shipping::before,
+  .guarantee::before {
+    font-size: 1.3rem;
+  }
+
+  .feedback {
+    width: 300px;
+
+    &__search {
+      width: 220px;
+    }
+
+    &__input {
+      width: 140px;
+      height: 45px;
+      padding-right: 133px;
+      font-size: 1rem;
+    }
+
+    &__button {
+      right: -72px;
+      height: 49px;
+      padding: 0 15px;
+      font-size: 1rem;
+    }
+
+    &__social {
+      width: 100%;
+    }
+  }
+
+  .soc {
+    width: 50px;
+    height: 50px;
+  }
+}
