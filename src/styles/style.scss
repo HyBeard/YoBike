@@ -855,53 +855,105 @@ input::placeholder {
   }
 }
 
-  &__price {
-    font-size: 1.2rem;
-    font-weight: 700;
+.blog {
+  min-width: 100%;
+  background: url("../assets/images/blog/blog_bg.jpg") no-repeat;
+  background-size: cover;
+
+  &__wrap {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0 20px;
   }
 
-  &__button {
-    @include button;
-    margin-left: 5px;
-    color: #808080;
+  &__title {
+    font-size: 1.2rem;
+    color: $white;
+  }
 
-    background: $paper;
+  &__news {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .item__wrap {
+      top: 47%;
+    }
+
+    .item__img {
+      filter: grayscale(0);
+    }
+
+    .item__info {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 360px;
+    overflow: hidden;
+    filter: grayscale(1);
+    transition: 0.3s filter ease;
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    padding: 25px;
+    color: $white;
+    transition: 0.5s ease;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 1s ease;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: $white;
+    transition: 0.3s ease;
 
     &:hover {
-      color: $white;
-      background: $secondary;
+      color: $primary;
     }
   }
 
-  &__button_like {
+  &__date {
     &::before {
-      content: "\f004";
+      padding-right: 4px;
+      font-family: FontAwesome;
+      content: "\f017";
     }
   }
 
-  &__button_info {
-    &::before {
-      content: "\f0c9";
-    }
-  }
-
-  //slider-2 style
-  .slick-slide {
-    width: 260px;
-    margin-right: 43.333px;
-  }
-
-  .slick-prev::before,
-  .slick-next::before {
-    z-index: 100;
-    font-family: FontAwesome;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.5rem;
-    color: $secondary;
-    opacity: 1;
+  &__comments {
+    color: $white;
     transition: 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &::before {
+      padding-right: 4px;
+      font-family: FontAwesome;
+      content: "\f075";
+    }
   }
+}
 
   .slick-prev {
     right: 52px;
