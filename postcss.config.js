@@ -1,6 +1,5 @@
 const postcssImport = require('postcss-import');
 const postcssPurgeCss = require('@fullhuman/postcss-purgecss');
-// const postcssNormalize = require('postcss-normalize');
 const postcssPxToRem = require('postcss-pxtorem');
 const autoprefixer = require('autoprefixer');
 const postcssSortMediaQueries = require('postcss-sort-media-queries');

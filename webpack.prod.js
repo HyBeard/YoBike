@@ -43,7 +43,7 @@ module.exports = () => {
 
     plugins: [
       new EnvironmentPlugin({
-        NODE_ENV: 'development',
+        NODE_ENV: 'production',
       }),
       new MiniCssExtractPlugin({ filename: '[name].[contenthash:8].css' }),
       // new BundleAnalyzerPlugin()

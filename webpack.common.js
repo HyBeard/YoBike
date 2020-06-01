@@ -63,8 +63,8 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 16 * 1024,
-              name: '[folder]/[name].[hash:4].[ext]',
+              limit: 8 * 1024,
+              name: 'img/[folder]/[name].[hash:4].[ext]',
             },
           },
           {
@@ -104,10 +104,11 @@ module.exports = {
     new CleanWebpackPlugin(),
     new ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
     new HtmlWebpackPlugin({
-      title: 'Bike Store',
       template: `${PATHS.src}/views/index.html`,
       inject: 'body',
-      // favicon: `${PATHS.public}/favicon.png`,
+      //error in prod :(
+      // minify: false,
+      favicon: `${PATHS.public}/bike.svg`,
     }),
   ],
 };
