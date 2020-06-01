@@ -1,4 +1,4 @@
-const content = {
+export const products = {
   size: 17,
   newsContent: document.getElementsByClassName('products__link'),
   cutText: function () {
@@ -9,7 +9,7 @@ const content = {
   },
 };
 
-const blogNews = {
+export const blogNews = {
   size: 50,
   newsContent: document.getElementsByClassName('item__title'),
   cutText: function () {
@@ -19,6 +19,3 @@ const blogNews = {
     }
   },
 };
-
-content.cutText();
-blogNews.cutText();

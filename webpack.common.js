@@ -1,4 +1,5 @@
 const path = require('path');
+const { ProvidePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const miniSvgDataUri = require('mini-svg-data-uri');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -101,6 +102,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
     new HtmlWebpackPlugin({
       title: 'Bike Store',
       template: `${PATHS.src}/views/index.html`,
