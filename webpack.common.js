@@ -107,7 +107,7 @@ module.exports = {
       template: `${PATHS.src}/views/index.html`,
       inject: 'body',
       //error in prod :(
-      // minify: false,
+      minify: false,
       favicon: `${PATHS.public}/bike.svg`,
     }),
   ],
