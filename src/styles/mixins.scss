@@ -1,0 +1,76 @@
+@use 'variables' as *;
+
+@mixin button {
+  width: 39px;
+  height: 39px;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  transition: 0.3s ease;
+
+  &::before {
+    font-family: FontAwesome;
+    font-size: 1rem;
+    line-height: 39px;
+  }
+}
+
+@mixin slider_content {
+  position: absolute;
+  top: 20%;
+  left: 48%;
+  color: $white;
+}
+
+@mixin slider_title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+@mixin slider_text {
+  display: flex;
+  align-items: center;
+}
+
+@mixin slider_sale {
+  font-size: 8rem;
+  font-weight: 700;
+  // line-height: 10rem;
+}
+
+@mixin slider_parcent {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  font-weight: 700;
+  // line-height: 4rem;
+}
+
+@mixin slider_button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 15px 25px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $white;
+  border: 2px solid $white;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: $secondary;
+    background: rgba($white, 0.7);
+    border-color: $secondary;
+  }
+}
+
+@mixin dropDownLink {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  font-size: 0.8rem;
+
+  &::before {
+    display: none;
+  }
+}
